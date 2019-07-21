@@ -7,15 +7,15 @@ public class Printnumbers
 	{
 	
 		Scanner a = new Scanner(System.in);
-//		int result;
-//		
-//		for(int i =0 ;i<10;i++)
-//		{
-//		System.out.println("Enter  num:");
-//		result =a.nextInt()+2; 
-//		System.out.println("Result:" + result);	
-//		}	
-//			
+		int result;
+		
+		for(int i =0 ;i<10;i++)
+		{
+		System.out.println("Enter  num:");
+		result =a.nextInt()+2; 
+		System.out.println("Result:" + result);	
+		}	
+			
 	
 		System.out.println("Method 2" );
 		int[] array = new int[9];
