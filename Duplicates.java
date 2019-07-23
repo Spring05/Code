@@ -1,22 +1,24 @@
 import java.util.Scanner;
 
-public class Duplicates {
+public class Duplicates 
+{
 
 	static int dup(int array[],int n)
 	{
-	int unique=0;
-    for (int i = 0; i < n-1	; i++)
-    {
-        if (array[i] !=array[i+1])
-        {
-            array[unique++] = array[i];
-        }   
+		int unique=0;
+	    for (int i = 0; i < n-1	; i++)
+	    {
+	        if (array[i] !=array[i+1])
+	        {
+	            array[unique++] = array[i];
+	        }   
         
-    }
+	    }
     
-    array[unique++] = array[n-1]; 
-    return unique;    
-}
+	    array[unique++] = array[n-1]; 
+	    return unique;    
+    }
+	
 	public static void main(String[] args) 
 	{
 		Scanner a =new Scanner(System.in);
