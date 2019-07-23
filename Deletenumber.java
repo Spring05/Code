@@ -7,16 +7,19 @@ public class Deletenumber
 	{
 		
 		Scanner a =new Scanner(System.in);
-		int[] array =new int[8];
+		int n;
+		System.out.println("Enter the number of elements");
+		n= a.nextInt();
+		int[] array =new int[n];
 		System.out.println("Enter numbers");
-		for(int i =0 ;i<array.length;i++)
+		for(int i =0 ;i<n;i++)
 		{
 			array[i]=a.nextInt();
 		}
 		
 		System.out.println("Enter number to be deleted ");
 		int number=a.nextInt();
-		for(int i =0 ;i<array.length;i++)
+		for(int i =0 ;i<n;i++)
 		{
 			if(array[i]==number)
 			{
@@ -28,15 +31,31 @@ public class Deletenumber
 				
 		}
 		
-		System.out.println("New Arrayafter deletion ");
-		for(int i =0 ;i<array.length-1;i++)
+		
+		System.out.println("New Array after deletion ");
+		if (array.length==0) 
 		{
+			  System.out.println("array is empty");
+		}
+		for(int i =0 ;i<n-1;i++)
+		{
+			
 			System.out.println(array[i]);
+			
 		}
 		
-
+		
 	}
 }
+
+
+//Enter the number of elements
+//1
+//Enter numbers
+//1
+//Enter number to be deleted 
+//1
+//New Array after deletion 
 
 	
 	//Test Case positive number
@@ -97,7 +116,6 @@ public class Deletenumber
 
 
 
-//test Case - Space
 
 
 
