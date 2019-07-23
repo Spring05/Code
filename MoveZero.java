@@ -7,7 +7,7 @@ public class MoveZero {
 		
 		Scanner a =new Scanner(System.in);
 		System.out.println("Enter the number of elements");
-		int n, temp ,nonzero=0;
+		int n,nonzero=0;
 		n= a.nextInt();
 		int[] array =new int[n];
 		System.out.println("Enter numbers");
