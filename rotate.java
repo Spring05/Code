@@ -3,25 +3,44 @@ import java.util.Scanner;
 public class rotate
 {
 	
-	static void rotates(int array[],int d,int n)
-	{
-		int[] temp = new int[d];
-		for(int i =0 ; i<d ;i++)
+//	static void rotates(int array[],int d,int n)
+//	{
+//		int[] temp = new int[d];
+//		for(int i =0 ; i<d ;i++)
+//		{
+//			temp[i]=array[i];		
+//		}
+//		for (int i = d; i < n; i++) 
+//		{
+//			array[i - d] = array[i];
+//		}
+//		for (int i = n-d; i < n; i++) 
+//		{
+//			array[i] = temp[i - (n - d)];
+//		}
+//	}
+	
+		static void rotates(int array[], int d, int n)
 		{
-			temp[i]=array[i];		
-		}
-		for (int i = d; i < n; i++) 
-		{
-			array[i - d] = array[i];
-		}
-		for (int i = n-d; i < n; i++) 
-		{
-			array[i] = temp[i - (n - d)];
+			{ 
+		        for (int i = 0; i < d; i++) 
+		            leftrotate(array, n); 
+		    } 
 		}
 		
-	}
-
-	public static void main(String[] args) 
+		static void leftrotate(int array[],int n)
+		{
+			int i;
+			int temps =array[0];
+			for(i =0 ; i < n-1 ; i++)
+			{
+				array[i]=array[i+1];
+			}
+			array[i]=temps;
+			
+		}	
+		
+	public static void main(String[] args) 		
 	{
 
 		Scanner a =new Scanner(System.in);
@@ -38,6 +57,7 @@ public class rotate
 		System.out.println("Enter the value of d  ");
 		int d =a.nextInt();
 		rotates(array,d,n);
+		
 		for (int i=0; i<n; i++) 
         {
         System.out.print(array[i]+" "); 
