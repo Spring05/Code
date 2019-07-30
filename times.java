@@ -1,20 +1,38 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class times 
 {
 	
+//	static void findDuplicates(int[] array,int n)
+//	{
+//	    for (int i = 0; i < array.length; i++) 
+//	    {
+//	        for (int j = i+1; j < array.length; j++) 
+//	        {
+//	            if(array[i] == array[j])
+//	            {
+//	                System.out.println("Duplicate Element : "+array[i]);
+//	            }
+//	        }
+//	    }
+		
 	static void findDuplicates(int[] array,int n)
 	{
-	    for (int i = 0; i < array.length; i++) 
-	    {
-	        for (int j = i+1; j < array.length; j++) 
-	        {
-	            if(array[i] == array[j])
-	            {
-	                System.out.println("Duplicate Element : "+array[i]);
-	            }
-	        }
-	    }
+		HashMap<Integer,Integer> h = new HashMap<Integer,Integer>();
+		for(int i = 0; i<array.length;i++) 
+		{
+			if(h.containsKey(array[i]))
+			{
+				System.out.println("Duplicate Element:"+array[i]);
+			}
+			
+			else
+			{
+				h.put(array[i], 1);
+			}
+		}
+		
 		
 		
 	}
