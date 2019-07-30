@@ -3,18 +3,19 @@ import java.util.Scanner;
 public class times 
 {
 	
-	static void findDuplicates(int array[],int n)
+	static void findDuplicates(int[] array,int n)
 	{
-		for(int i = 0 ;i < n ;i++)
-		{
-			for (int j = i+1 ; j<n; j++)
-			{
-				if(array[i]==array[j]);
-				{
-					System.out.println("Duplicate Element : "+array[i]);
-				}
-			}
-		}
+	    for (int i = 0; i < array.length; i++) 
+	    {
+	        for (int j = i+1; j < array.length; j++) 
+	        {
+	            if(array[i] == array[j])
+	            {
+	                System.out.println("Duplicate Element : "+array[i]);
+	            }
+	        }
+	    }
+		
 		
 	}
 	
@@ -30,7 +31,7 @@ public class times
 		{
 			array[i]=a.nextInt();
 		}
-		findDuplicates(array,n);
-        
+		 
+		findDuplicates(array,n); 
      }
 }
