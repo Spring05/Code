@@ -40,39 +40,59 @@ public class rotate
 //			
 //		}	
 	
-	static void Rotateleft(int array[], int d, int n) 
+//	static void Rotateleft(int array[], int d, int n) 
+//    { 
+//        int i, j, k, temp; 
+//        int g_c_d = gcd(d, n); 
+//        for (i = 0; i < g_c_d; i++) 
+//        {
+//            temp = array[i]; 
+//            j = i; 
+//            while (true) 
+//            { 
+//                k = j + d; 
+//                if (k >= n) 
+//                {
+//                    k = k - n; 
+//                }
+//                if (k == i) 
+//                {
+//                    break; 
+//                }
+//              array[j] = array[k]; 
+//              j = k; 
+//            } 
+//            array[j] = temp; 
+//        } 
+//    } 
+//	
+//	static int gcd(int a, int b) 
+//    { 
+//        if (b == 0) 
+//            return a; 
+//        else
+//            return gcd(b, a % b); 
+//    } 
+	
+	static void Rotate(int array[], int d, int n) 
+    {  
+        reverseArray(array, 0, d-1); 
+        reverseArray(array, d, n-1); 
+        reverseArray(array, 0, n-1); 
+    } 
+	static void reverseArray(int array[], int start, int end) 
     { 
-        int i, j, k, temp; 
-        int g_c_d = gcd(d, n); 
-        for (i = 0; i < g_c_d; i++) 
-        {
-            temp = array[i]; 
-            j = i; 
-            while (true) 
-            { 
-                k = j + d; 
-                if (k >= n) 
-                {
-                    k = k - n; 
-                }
-                if (k == i) 
-                {
-                    break; 
-                }
-              array[j] = array[k]; 
-              j = k; 
-            } 
-            array[j] = temp; 
+        int temp; 
+        while (start < end) 
+        { 
+            temp = array[start]; 
+            array[start] = array[end]; 
+            array[end] = temp; 
+            start++; 
+            end--; 
         } 
     } 
 	
-	static int gcd(int a, int b) 
-    { 
-        if (b == 0) 
-            return a; 
-        else
-            return gcd(b, a % b); 
-    } 
 		
 	public static void main(String[] args) 		
 	{
@@ -90,7 +110,7 @@ public class rotate
 		
 		System.out.println("Enter the value of d  ");
 		int d =a.nextInt();
-		Rotateleft(array,d,n);
+		Rotate(array,d,n);
 		
 		for (int i=0; i<n; i++) 
         {
