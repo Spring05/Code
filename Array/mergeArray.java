@@ -32,7 +32,7 @@ public class mergeArray {
 		
 		else if (j < n2)
 		{
-			array3[k++]=array2[i++];
+			array3[k++]=array2[j++];
 		}
 		return array3;
 		
@@ -53,11 +53,12 @@ public class mergeArray {
 		int n3 = n1+ n2;
 		int[] array3= new int[n3];
 		
-		System.out.println("Enter numbers");
+		System.out.println("Enter numbers in array 1");
 		for(int i=0 ;i<n1;i++)	
 		{
 			array1[i]=a.nextInt();
 		}
+		System.out.println("Enter numbers in array 2");
 		for(int i=0 ;i<n2;i++)	
 		{
 			array2[i]=b.nextInt();
