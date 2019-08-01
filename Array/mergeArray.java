@@ -2,41 +2,45 @@ import java.util.Scanner;
 
 public class mergeArray {
 
-	public static int[] merges(int[] array1, int[] array2, int[] array3, int n2, int n1)
+	public static  int[] merges(int[] array1, int[] array2, int[] array3, int n2, int n1)
 	{
 		if(array1.length==0)
-		{
-			return array2;
-		}
-		
-		if(array2.length==0)
 		{
 			return array1;
 		}
 		
-		int i = 0 , j = 0, k = 0 ;
-		if(array1[i]<array2[j])
+		if(array2.length==0)
 		{
-			array3[k++]=array1[i++];
+			return array2;
 		}
 		
-		else 
-		{
-			array3[k++]=array2[j++];
-		}
-		
-		if(i < n1)
-		{
-			array3[k++]=array1[i++];
-		}
-		
-		else if (j < n2)
-		{
-			array3[k++]=array2[j++];
-		}
+		int i = 0, j = 0, k = 0; 
+        while(i<n1 && j <n2) 
+        { 
+            if (array1[i] < array2[j]) 
+            {
+                array3[k++] = array1[i++]; 
+            }
+            else
+            {
+                array3[k++] = array2[j++]; 
+            }
+        } 
+      
+        if (i < n1) 
+        {
+            array3[k++] = array1[i++]; 
+        }
+       
+        if (j < n2) 
+        {
+            array3[k++] = array2[j++]; 
+        }
 		return array3;
+    } 
 		
-	}
+		
+	
 	
 	
 	public static void main(String[] args) 
