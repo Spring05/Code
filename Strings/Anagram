@@ -1,1 +1,96 @@
 
+package New;
+
+import java.util.Scanner;
+
+public class Anagram 
+{
+	
+	 public static boolean Anagrams(String str1, String str2)
+	{
+		if (str1.length()!=str2.length())
+		{
+			return false;
+		}
+		
+		int[] count = new int[256];
+		for(int i = 0; i < str1.length(); i++)
+		{
+			count[str1.charAt(i)]++;
+			count[str2.charAt(i)]--;
+		}
+		
+		for(int j =0 ; j< count.length ;j++)
+		{
+			if(count[j]!=0)
+			{
+				return false;
+			}
+		}
+		
+		return true;
+}
+
+	
+	
+
+	public static void main(String[] args) 
+	{
+		Scanner a = new Scanner(System.in);
+		System.out.println("Enter the String1:");
+		String str1 = a.nextLine();
+		System.out.println("Enter the String2:");
+	    String str2 = a.nextLine();
+	    if(Anagrams(str1, str2)) 
+	    {
+	          System.out.println("Anagram");
+	    }
+	    else 
+	    {
+	         System.out.println("Not an Anagram");
+	    }
+	  }
+}
+
+
+////Test Case
+//Enter the String1:
+//abcd
+//Enter the String2:
+//dcab
+//Anagram
+////
+
+//Enter the String1:
+//a
+//Enter the String2:
+//b
+//Not an Anagram
+
+//
+//Enter the String1:
+//a
+//Enter the String2:
+//bc
+//Not an Anagram
+
+//Enter the String1:
+//-1
+//Enter the String2:
+//-2
+//Not an Anagram
+
+//Enter the String1:
+//0
+//Enter the String2:
+//0
+//Anagram
+
+//Enter the String1:
+//1234
+//Enter the String2:
+//23
+//Not an Anagram
+
+
+
