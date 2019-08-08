@@ -109,6 +109,8 @@ public class MinimumWindow
 //fg
 //Invalid
 
+
+//time Complexity o(n)
 //
 //Enter the String1:
 //dfgh
