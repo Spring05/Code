@@ -14,12 +14,12 @@ public class OrderofWords
 			System.out.println("Not valid");
 		}
 		String str[] = s.split(" "); 
-        String result = ""; 
-        for (int i = str.length - 1; i >= 0; i--) 
-        { 
-            result += str[i] + " "; 
-        }  
-        System.out.println(result.substring(0, result.length() - 1)); 
+		String result = ""; 
+		for (int i = str.length - 1; i >= 0; i--) 
+		{ 
+		    result += str[i] + " "; 
+		}  
+		System.out.println(result.substring(0, result.length() - 1)); 
 	}
 
 }
