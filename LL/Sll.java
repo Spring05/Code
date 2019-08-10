@@ -2,7 +2,6 @@ package New;
 
 public class Sll 
 {
-	
 	static Node head;
 
 	public static class Node
