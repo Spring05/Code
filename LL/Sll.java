@@ -2,13 +2,14 @@ package New;
 
 public class Sll 
 {
-	static Node head;
+	
+	public static Node head;
 
 	public static class Node
 	{
 		int value ;
-		Node next;
-		Node(int value)
+		 Node next;
+		public Node(int value)
 		{
 			this.value = value;
 			this.next=null;
@@ -62,6 +63,22 @@ public class Sll
 		
 	}
 	
+	public static Sll reverse(Sll s)
+	{
+		Node previous = null;
+		Node next=null;
+		Node current=head;
+		while(current!=null)
+		{
+			 next = current.next;
+			 current.next=previous;
+			 previous=current;
+			 current=next;
+		}
+		head=previous;
+		return s;
+	}
+	
 	public static void main(String[] args) 
 	{
 //		Scanner a =new Scanner(System.in);
@@ -82,6 +99,8 @@ public class Sll
 		Sll.Sllinsert(6);
 		printnode(s);
 		findelement(s);
+		reverse(s);
+		printnode(s);
 	}
 	
 	
@@ -109,6 +128,22 @@ public class Sll
 //linked List:
 //1
 //Middle element:1
+
+////linked List:
+//1
+//2
+//3
+//4
+//5
+//6
+//Middle element:4
+//linked List:
+//6
+//5
+//4
+//3
+//2
+//1
 
 
 //Time Complexity : O(N)
