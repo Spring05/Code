@@ -71,26 +71,52 @@ public class Trees
 			System.out.print(root.value + " "); 
 		}
 	}
-	 
+	
+	void preorder()
+	{
+		if(root==null)
+		{
+			return;
+		}
+		
+		Stack<Node> s1 = new Stack<Node>();
+		s1.push(root);
+		while(s1.size()!=0)
+		{
+			root=s1.pop();
+			System.out.print(root.value + " "); 
+			if(root.right!=null)
+			{
+				s1.push(root.right);
+			}
+			
+			if(root.left!=null)
+			{
+				s1.push(root.left);
+			}
+		}	
+	 }
 	 
 
 	
 	public static void main(String[] args)
 	{
-		Trees t = new Trees();
-		t.root = new Node(10); 
-    t.root.left = new Node(8); 
-    t.root.right = new Node(17); 
-    t.root.left.left = new Node(7); 
-    t.root.left.right = new Node(11); 
-    t.root.left.left.left = new Node(3); 
-    t.root.left.left.right = new Node(9);
-    t.root.right.left = new Node(6); 
-    t.root.right.right = new Node(21); 
-    System.out.println("Inorder"); 
-		t.inorder();
-		System.out.println("Postorder"); 
-		t.postorder();
+	Trees t = new Trees();
+	t.root = new Node(10); 
+        t.root.left = new Node(8); 
+        t.root.right = new Node(17); 
+        t.root.left.left = new Node(7); 
+        t.root.left.right = new Node(11); 
+        t.root.left.left.left = new Node(3); 
+        t.root.left.left.right = new Node(9); 
+        t.root.right.left = new Node(6); 
+        t.root.right.right = new Node(21); 
+        System.out.println("Inorder : "); 
+	t.inorder();
+	System.out.println("\nPostorder:"); 
+	t.postorder();
+	System.out.println("\nPreorder:");
+	t.preorder();
 
 	}	
 }
@@ -99,3 +125,5 @@ public class Trees
 //3 7 9 8 11 10 6 17 21 
 //Postorder
 //3 9 7 11 8 6 21 17 10 
+//Preorder:
+//10 8 7 3 9 11 17 6 21 
