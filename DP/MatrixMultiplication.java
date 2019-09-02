@@ -53,5 +53,19 @@ public class MatrixMultiplication
 //4
 //18
 
+// Enter the Length of Array
+// 1
+// Enter the numbers
+// 1
+// 0
+
+// //Enter the Length of Array
+// 2
+// Enter the numbers
+// -1
+// -2
+// 0
+
+
 //Time Taken 45min
 
