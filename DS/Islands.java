@@ -51,6 +51,9 @@ public class Islands {
 		Islands i = new Islands();
 		char[][] grid = { { '1', '1', '1' }, { '1', '0', '0' }, { '1', '0', '1' } };
 		System.out.println("Count :" + i.count(grid));
+		Islands i1 = new Islands();
+		char[][] grid1 = { { 1 }, { 1 }, { 0 } };
+		System.out.println("Count :" + i1.count(grid));
 		
 		
 
